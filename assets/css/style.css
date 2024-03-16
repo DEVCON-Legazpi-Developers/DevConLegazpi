@@ -102,7 +102,6 @@ a:hover {
 #header .logo h1 a:hover {
   color: var(--secondary);
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
@@ -144,7 +143,6 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #637f7b;
@@ -469,7 +467,6 @@ a:hover {
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -523,6 +520,10 @@ section {
   padding-bottom: 30px;
 }
 
+.section-title .opposite-color-section {
+  color: var(--text-color-dark);
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
@@ -534,7 +535,7 @@ section {
 
 .section-title p {
   margin-bottom: 0;
-  color: #5f7c78;
+  color: var(--text-color-light);
 }
 
 /*--------------------------------------------------------------
@@ -588,11 +589,14 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about .content p {
+  color: var(--text-color-dark);
+}
+
 .about .content h3 {
   font-weight: 500;
   font-size: 24px;
-  color: #58716d;
-  font-family: "Poppins", sans-serif;
+  color: var(--secondary);
 }
 
 .about .content ul {
@@ -626,7 +630,6 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
   color: #58716d;
 }
 
@@ -669,24 +672,23 @@ section {
   line-height: 24px;
   display: block;
   font-weight: 700;
-  color: #58716d;
+  color: var(--secondary);
   margin-left: 50px;
 }
 
 .counts .count-box p {
   padding: 30px 0 0 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
   font-size: 14px;
+  color: var(--text-color-dark);
 }
 
 .counts .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 20px;
-  color: #7c9995;
+  color: var(--secondary);
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
 
@@ -711,7 +713,7 @@ section {
 .services .icon-box::before {
   content: "";
   position: absolute;
-  background: #aff4e9;
+  background: var(--secondary);
   right: -60px;
   top: -40px;
   width: 100px;
@@ -759,6 +761,7 @@ section {
 }
 
 .services .description {
+  color: var(--text-color-dark);
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
@@ -782,7 +785,7 @@ section {
 --------------------------------------------------------------*/
 .cta {
   background: linear-gradient(rgba(66, 84, 81, 0.5), rgba(43, 56, 54, 0.5)),
-    url("../img/cta-bg.jpg") fixed center center;
+    url("../storage/img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -798,7 +801,6 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -807,13 +809,13 @@ section {
   border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--text-color-light);
+  background: var(--secondary);
   color: var(--text-color-light);
 }
 
 .cta .cta-btn:hover {
-  background: var(--secondary);
-  border: 2px solid var(--secondary);
+  background: var(--quaternary);
 }
 
 /*--------------------------------------------------------------
@@ -836,12 +838,12 @@ section {
 .more-services .card-title a {
   font-weight: 600;
   font-size: 18px;
-  color: var(--primary);
+  color: var(--secondary);
   transition: ease-in-out 0.3s;
 }
 
 .more-services .card-title a:hover {
-  color: var(--secondary);
+  color: var(--tertiary);
 }
 
 .more-services .btn {
@@ -852,7 +854,8 @@ section {
 
 .more-services .btn:hover {
   color: var(--text-color-light);
-  background: var(--secondary);
+  border: 2px solid var(--text-color-dark);
+  background: var(--tertiary);
 }
 
 /*--------------------------------------------------------------
@@ -863,6 +866,7 @@ section {
 }
 
 .info-box .content h3 {
+  color: var(--text-color-dark);
   font-weight: 400;
   font-size: 34px;
 }
@@ -875,7 +879,7 @@ section {
 
 .info-box .content p {
   font-size: 15px;
-  color: #6b8a86;
+  color: var(--text-color-light);
 }
 
 .info-box .img {
@@ -914,11 +918,12 @@ section {
   outline: none;
   transition: ease-in-out 0.3s;
   cursor: pointer;
+  color: var(--text-color-light);
 }
-
+/* 
 .info-box .accordion-list a:hover {
   color: var(--primary);
-}
+} */
 
 .info-box .accordion-list span {
   color: var(--text-color-light);
@@ -935,6 +940,7 @@ section {
 }
 
 .info-box .accordion-list p {
+  color: var(--text-color-light);
   margin-bottom: 0;
   padding: 10px 0 0 0;
 }
@@ -948,7 +954,7 @@ section {
 }
 
 .info-box .accordion-list a.collapsed:hover {
-  color: var(--secondary);
+  color: var(--text-color-light);
 }
 
 .info-box .accordion-list a.collapsed .icon-show {
@@ -984,13 +990,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Our Portfolio
+# Our partners
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+.partners .partners-item {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.partners #partners-flters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -1000,7 +1006,7 @@ section {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.partners #partners-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -1008,28 +1014,29 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--text-color-dark);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: var(--secondary);
+.partners #partners-flters li:hover,
+.partners #partners-flters li.filter-active {
+  color: var(--tertiary);
 }
 
-.portfolio #portfolio-flters li:last-child {
+.partners #partners-flters li:last-child {
   margin-right: 0;
 }
 
-.portfolio .portfolio-wrap {
+.partners .partners-wrap {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.portfolio .portfolio-wrap::before {
+.partners .partners-wrap::before {
   content: "";
   background: rgba(88, 113, 109, 0.6);
   position: absolute;
@@ -1042,7 +1049,7 @@ section {
   opacity: 0;
 }
 
-.portfolio .portfolio-wrap .portfolio-info {
+.partners .partners-wrap .partners-info {
   opacity: 0;
   position: absolute;
   top: 10%;
@@ -1053,19 +1060,19 @@ section {
   transition: all ease-in-out 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-info h4 {
+.partners .partners-wrap .partners-info h4 {
   font-size: 20px;
   color: var(--text-color-light);
   font-weight: 600;
 }
 
-.portfolio .portfolio-wrap .portfolio-info p {
+.partners .partners-wrap .partners-info p {
   color: var(--text-color-light);
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.portfolio .portfolio-wrap .portfolio-links {
+.partners .partners-wrap .partners-links {
   opacity: 0;
   left: 0;
   right: 0;
@@ -1076,7 +1083,7 @@ section {
   transition: all ease-in-out 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a {
+.partners .partners-wrap .partners-links a {
   color: var(--text-color-light);
   margin: 0 2px;
   font-size: 28px;
@@ -1084,11 +1091,11 @@ section {
   transition: 0.3s;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.partners .partners-wrap .partners-links a:hover {
   color: var(--text-color-light);
 }
 
-.portfolio .portfolio-wrap:hover::before {
+.partners .partners-wrap:hover::before {
   top: 0;
   left: 0;
   right: 0;
@@ -1096,34 +1103,34 @@ section {
   opacity: 1;
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-info {
+.partners .partners-wrap:hover .partners-info {
   opacity: 1;
   top: calc(50% - 48px);
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-links {
+.partners .partners-wrap:hover .partners-links {
   opacity: 1;
   bottom: calc(50% - 50px);
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# partners Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.partners-details {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-slider img {
+.partners-details .partners-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination {
+.partners-details .partners-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
+.partners-details
+  .partners-details-slider
   .swiper-pagination
   .swiper-pagination-bullet {
   width: 12px;
@@ -1133,19 +1140,19 @@ section {
   border: 1px solid var(--secondary);
 }
 
-.portfolio-details
-  .portfolio-details-slider
+.partners-details
+  .partners-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
   background-color: var(--secondary);
 }
 
-.portfolio-details .portfolio-info {
+.partners-details .partners-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(88, 113, 109, 0.08);
 }
 
-.portfolio-details .portfolio-info h3 {
+.partners-details .partners-info h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1153,27 +1160,27 @@ section {
   border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.partners-details .partners-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.partners-details .partners-info ul li + li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.partners-details .partners-description {
   padding-top: 30px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.partners-details .partners-description h2 {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.partners-details .partners-description p {
   padding: 0;
 }
 
@@ -1300,15 +1307,16 @@ section {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  color: var(--text-color-dark);
 }
 
 .contact .info p {
   font-size: 15px;
+  color: var(--text-color-dark);
 }
 
 .contact .info-bg {
-  background: white;
+  background: var(--text-color-light);
 }
 
 .contact .contact-form-wrap {
@@ -1365,7 +1373,6 @@ section {
 }
 
 .contact .php-email-form label {
-  font-family: "Poppins", sans-serif;
   margin-bottom: 5px;
   color: #5f7c78;
 }
@@ -1457,7 +1464,6 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
   color: var(--text-color-light);
 }
 
@@ -1558,7 +1564,7 @@ section {
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #158f7c;
+  background: var(--quaternary);
 }
 
 #footer .copyright {
