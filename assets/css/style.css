@@ -879,7 +879,7 @@ section {
 
 .info-box .content p {
   font-size: 15px;
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
 }
 
 .info-box .img {
