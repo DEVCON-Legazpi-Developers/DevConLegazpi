@@ -8,15 +8,31 @@
   --primary: #e8ca04;
   --secondary: #ea641d;
   --tertiary: #7f08ff;
-  --quaternary: #71b406;
-  /*
-  --quinary: ;
-  --senary: ;
-  --septenary: ;
-  --octonary: ;
-  --nonary: ;
-  --denary: ;
-  */
+  --quaternary: #71b406; ;
+}
+
+.text-dark {
+  background: var(--text-color-dark);
+}
+
+.text-light {
+  background: var(--text-color-light);
+}
+
+.primary-bg {
+  background: var(--primary);
+}
+
+.secondary-bg {
+  background: var(--secondary);
+}
+
+.tertiary-bg {
+  background: var(--tertiary);
+}
+
+.quaternary-bg {
+  background: var(--quaternary);
 }
 
 /*--------------------------------------------------------------
