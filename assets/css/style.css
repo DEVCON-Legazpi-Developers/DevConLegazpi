@@ -697,9 +697,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Our Services
+# Our Agenda
 --------------------------------------------------------------*/
-.services .icon-box {
+.agenda .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -710,7 +710,7 @@ section {
   z-index: 1;
 }
 
-.services .icon-box::before {
+.agenda .icon-box::before {
   content: "";
   position: absolute;
   background: var(--secondary);
@@ -723,7 +723,7 @@ section {
   z-index: -1;
 }
 
-.services .icon-box:hover::before {
+.agenda .icon-box:hover::before {
   background: var(--secondary);
   right: 0;
   top: 0;
@@ -732,7 +732,7 @@ section {
   border-radius: 0px;
 }
 
-.services .icon {
+.agenda .icon {
   margin: 0 auto 20px auto;
   padding-top: 10px;
   display: inline-block;
@@ -744,39 +744,39 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.services .icon i {
+.agenda .icon i {
   font-size: 36px;
   line-height: 1;
   color: var(--text-color-light);
 }
 
-.services .title {
+.agenda .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.services .title a {
+.agenda .title a {
   color: var(--secondary);
 }
 
-.services .description {
+.agenda .description ul li {
   color: var(--text-color-dark);
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover .title a,
-.services .icon-box:hover .description {
+.agenda .icon-box:hover .title a,
+.agenda .icon-box:hover .description ul li {
   color: var(--text-color-light);
 }
 
-.services .icon-box:hover .icon {
+.agenda .icon-box:hover .icon {
   background: var(--text-color-light);
 }
 
-.services .icon-box:hover .icon i {
+.agenda .icon-box:hover .icon i {
   color: var(--secondary);
 }
 
@@ -819,40 +819,40 @@ section {
 }
 
 /*--------------------------------------------------------------
-# More Services
+# More Agenda
 --------------------------------------------------------------*/
-.more-services img {
+.more-agenda img {
   border-radius: 0;
 }
 
-.more-services .card {
+.more-agenda .card {
   border: 0;
   text-align: ceneter;
 }
 
-.more-services .card-body {
+.more-agenda .card-body {
   -moz-text-align-last: center;
   text-align-last: center;
 }
 
-.more-services .card-title a {
+.more-agenda .card-title a {
   font-weight: 600;
   font-size: 18px;
   color: var(--secondary);
   transition: ease-in-out 0.3s;
 }
 
-.more-services .card-title a:hover {
+.more-agenda .card-title a:hover {
   color: var(--tertiary);
 }
 
-.more-services .btn {
+.more-agenda .btn {
   border-radius: 50px;
   padding: 4px 30px 6px 30px;
   border: 2px solid var(--secondary);
 }
 
-.more-services .btn:hover {
+.more-agenda .btn:hover {
   color: var(--text-color-light);
   border: 2px solid var(--text-color-dark);
   background: var(--tertiary);
