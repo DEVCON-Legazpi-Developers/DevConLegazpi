@@ -8,7 +8,7 @@
   --primary: #e8ca04;
   --secondary: #ea641d;
   --tertiary: #7f08ff;
-  --quaternary: #71b406; ;
+  --quaternary: #71b406;
 }
 
 .text-dark {
@@ -45,7 +45,7 @@ h4,
 h5,
 h6,
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Proxima Nova", Georgia, sans-serif;
 }
 
 body {
