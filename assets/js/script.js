@@ -266,18 +266,3 @@
    */
   new PureCounter();
 })();
-
-// mar
-let intervalId = setInterval(function () {
-  document.getElementById("next").click();
-}, 5000);
-
-const resetInterval = () => {
-  clearInterval(intervalId);
-  intervalId = setInterval(function () {
-    document.getElementById("next").click();
-  }, 5000);
-};
-
-document.getElementById("next").addEventListener("click", resetInterval);
-document.getElementById("prev").addEventListener("click", resetInterval);

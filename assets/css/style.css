@@ -802,6 +802,10 @@ section {
   color: var(--secondary);
 }
 
+.map-small-view {
+  height: 300px;
+}
+
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
@@ -1626,3 +1630,11 @@ section {
   font-size: 13px;
   color: var(--text-color-light);
 }
+
+/*--------------------------------------------------------------
+# View-Map
+--------------------------------------------------------------*/
+.leaflet-routing-alternatives-container {
+  color: var(--text-color-dark);
+  background: var(--text-color-light);
+} 
