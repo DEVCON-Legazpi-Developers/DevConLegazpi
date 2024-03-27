@@ -540,18 +540,24 @@ section {
   color: var(--text-color-dark);
 }
 
+.section-title .white-color-section {
+  color: var(--text-color-light);
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: var(--text-color-light);
+  /* color: var(--text-color-light); */
+  color: var(--text-color-dark);
 }
 
 .section-title p {
   margin-bottom: 0;
-  color: var(--text-color-light);
+  /* color: var(--text-color-light); */
+  color: var(--text-color-dark);
 }
 
 /*--------------------------------------------------------------
@@ -1046,6 +1052,7 @@ section {
 }
 
 .partners .partners-wrap {
+  background-color: white;
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -1054,7 +1061,7 @@ section {
 
 .partners .partners-wrap::before {
   content: "";
-  background: rgba(88, 113, 109, 0.6);
+  background: rgba(88, 113, 95, 0.6);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -1204,7 +1211,7 @@ section {
 # Our Speakers
 --------------------------------------------------------------*/
 .speakers {
-  background: var(--text-color-light);
+  /* background: var(--text-color-light); */
   padding: 60px 0;
 }
 
