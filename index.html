@@ -24,6 +24,16 @@
     <!-- external styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- MAP API -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+
 </head>
 
 <body>
@@ -505,7 +515,7 @@
                             <div class="partners-links">
                                 <a href="assets/storage/img/partners/6.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="App 3">
-                                    <i class="bx bx-plus"></i>  
+                                    <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
@@ -731,14 +741,16 @@
                     </div>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
                         <div class="card">
-                            <img src="assets/storage/img/more-service-2.jpg" class="card-img-top" alt="...">
+                            <div id="map" class="card-img-top map-small-view"></div>
                             <div class="card-body">
                                 <h5 class="card-title"><a href=""> Map </a></h5>
                                 <p class="card-text">
                                     Ut quas omnis est. Non et aut tempora dignissimos similique in dignissimos. Sit
                                     incidunt et odit iusto
                                 </p>
-                                <a class="btn scrollto" href="#"> Visit Google Maps </a>
+                                <a class="btn scrollto" href="/view-map.html" target="_blank">
+                                    Visit Maps
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -973,13 +985,13 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <a class="scrollto" href="#hero">
-                            <img src="assets/storage/img/eventlogo.png" alt="" class="img-fluid"
-                                height="200" width="150">
+                            <img src="assets/storage/img/eventlogo.png" alt="" class="img-fluid" height="200"
+                                width="150">
                         </a>
                         <p>
                             Legazpi City, Philippines
-<br><br>
-                
+                            <br><br>
+
                             <strong>Phone:</strong> +63 5589 55488 55<br>
                             <strong>Email:</strong> devcon@example.com<br>
                         </p>
@@ -1088,6 +1100,7 @@
 
     <!-- external script -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
