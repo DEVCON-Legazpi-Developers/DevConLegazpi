@@ -116,6 +116,26 @@
   });
 
   /**
+   * Background scroll effect
+   */
+  onscroll(document, () => {
+    const scrolledY = window.scrollY;
+    const sections = [
+      select(".stars-overlay"), 
+      select(".partners-stars-overlay"), 
+      select(".agenda-stars-overlay"), 
+      select(".more-agenda-stars-overlay"), 
+      select(".info-stars-overlay"), 
+      select("#contact")];
+  
+    sections.forEach(section => {
+      if (section) {
+        section.style.backgroundPosition = 'center ' + (scrolledY * 0.2) + 'px';
+      }
+    });
+  });
+  
+  /**
    * Back to top button
    */
   let backtotop = select(".back-to-top");
