@@ -4,8 +4,19 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
 (function () {
   "use strict";
+
+   /**
+   * Preloader
+   */
+  window.addEventListener('load', function() {
+    var preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  });
 
   /**
    * Easy selector helper function
@@ -125,8 +136,7 @@
       select(".partners-stars-overlay"), 
       select(".agenda-stars-overlay"), 
       select(".more-agenda-stars-overlay"), 
-      select(".info-stars-overlay"), 
-      select("#contact")];
+      select(".contact-stars-overlay")];
   
     sections.forEach(section => {
       if (section) {

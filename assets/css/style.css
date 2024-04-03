@@ -63,6 +63,22 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Pre-loader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -1008,28 +1024,6 @@ section {
 /*--------------------------------------------------------------
 # Info Box
 --------------------------------------------------------------*/
-.info-box {
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.info-stars-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../storage/bg/stars.svg');
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center;
-  z-index: 0;
-  background-attachment: fixed;
-  mask-image: linear-gradient(to bottom, transparent, black 20%);
-}
-
 .info-box .content {
   padding: 60px 100px 0 100px;
 }
@@ -1505,13 +1499,25 @@ section {
 # Contact Us
 --------------------------------------------------------------*/
 .contact {
-  width: 100vw; 
-  max-width: 100%; 
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.contact-stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('../storage/bg/stars.svg');
   background-size: cover;
   background-repeat: repeat;
-  background-position: center; 
+  background-position: center;
+  z-index: 0;
   background-attachment: fixed;
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
 }
 
 .contact .infos {
