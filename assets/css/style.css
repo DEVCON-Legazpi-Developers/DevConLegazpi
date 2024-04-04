@@ -19,6 +19,7 @@
   background: var(--text-color-light);
 }
 
+
 .primary-bg {
   background: var(--primary);
 }
@@ -421,13 +422,12 @@ a:hover {
   background-color: rgba(21, 27, 26, 0.7);
   position: absolute;
   height: 100vh;
-  width: 100%;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  background: linear-gradient(to right, rgba(21, 27, 26, 0.8) 0%, rgba(21, 27, 26, 0) 20%, rgba(21, 27, 26, 0) 80%, rgba(21, 27, 26, 0.8) 100%);
 }
-
 #hero .carousel-container {
   display: flex;
   flex-direction: column;
@@ -602,7 +602,13 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
-
+.section-title1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.white-light {
+  color: var(--text-color-light);
+}
 .section-title h2 {
   font-size: 32px;
   font-weight: 1000;
@@ -618,6 +624,7 @@ section {
   /* color: var(--text-color-light); */
   color: var(--text-color-dark);
 }
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -674,7 +681,7 @@ section {
 .about {
   width: 100vw; 
   max-width: 100%; 
-  background-image: url('../storage/bg/violet.svg');
+  /* background-image: url('../storage/bg/violet.svg'); */
   background-color: white;
   background-size: cover;
   background-repeat: repeat;
@@ -959,11 +966,23 @@ section {
 /*--------------------------------------------------------------
 # More Agenda
 --------------------------------------------------------------*/
-.more-agenda {
+/* .more-agenda {
   position: relative;
   width: 100vw;
   max-width: 100%;
   background-image: linear-gradient(to left bottom, #e8ca04, #9ec337, #5eb45b, #22a074, #00897f);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+
+.more-agenda {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  background-image: url('../storage/img/bgground.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -1019,6 +1038,26 @@ section {
   color: var(--text-color-light);
   background: var(--secondary);
   border: 2px solid var(--secondary);
+}
+.card-fixed-size {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-fixed-size .card-img-top {
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.card-fixed-size .card-body {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.map-small-view {
+  height: 200px; /* Adjust the height as needed */
 }
 
 /*--------------------------------------------------------------
@@ -1160,7 +1199,11 @@ section {
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
+  background-image: url('../storage/img/redbg.png');
+  background-size: cover;
+  background-position: center;
 }
+/* .partners { position: relative; width: 100vw; max-width: 100%; overflow: hidden; background-image: linear-gradient(to right top, #0069ff, #2e5dff, #4c4dff, #6638ff, #7f08ff); } */
 
 .partners-stars-overlay {
   position: absolute;
@@ -1170,7 +1213,7 @@ section {
   height: 100%;
   background-image: url('../storage/bg/stars.svg');
   background-size: cover;
-  background-repeat: repeat;
+background-repeat: repeat;
   background-position: center;
   z-index: 0;
   background-attachment: fixed;
@@ -1377,7 +1420,7 @@ section {
   position: relative;
   width: 100vw;
   max-width: 100%;
-  background-image: linear-gradient(to right top, #0069ff, #2e5dff, #4c4dff, #6638ff, #7f08ff);
+  /* background-image: linear-gradient(to right top, #0069ff, #2e5dff, #4c4dff, #6638ff, #7f08ff); */
   background-size: cover;
   background-position: center;
   overflow: hidden;
