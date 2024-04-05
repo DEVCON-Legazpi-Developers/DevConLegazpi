@@ -296,3 +296,27 @@
    */
   new PureCounter();
 })();
+
+
+const sections = document.querySelectorAll('section');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1, // Adjust this value to control when the animation should trigger
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = entry.target;
+      target.classList.add('fade-in');
+      observer.unobserve(target);
+    }
+  });
+}, options);
+
+sections.forEach(section => {
+  section.classList.add('hidden');
+  observer.observe(section);
+});

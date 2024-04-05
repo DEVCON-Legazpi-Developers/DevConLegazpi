@@ -1893,3 +1893,19 @@ background-repeat: repeat;
   color: var(--text-color-dark);
   background: var(--text-color-light);
 } 
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden,
+  .fade-in {
+    transition: none;
+  }
+}
