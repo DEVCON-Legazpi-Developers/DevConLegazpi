@@ -8,7 +8,7 @@
     <title> DEVCON 2024 : LEGAZPI ROADSHOW 4 </title>
 
     <!-- Icon -->
-    <link rel="icon" href="assets/storage/icons/DEVCON_Logo_Light_Square.png" type="image/x-icon">
+    <link rel="icon" href="assets/storage/DevConLogo/devcon_portrait.png" type="image/x-icon">
 
     <!-- external fonts -->
     <link rel="stylesheet" type="text/css" href="assets/css/fonts/fonts.min.css" />
@@ -24,10 +24,23 @@
     <!-- external styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- MAP API -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.js"></script>
+
 </head>
 
 <body>
-
+    
+    <div id="preloader">
+        <img src="assets/storage/icons/pre-loader.gif" alt="Loading..." style="width: 100px;">
+    </div>      
 
 
 
@@ -82,77 +95,64 @@
                 <div class="carousel-inner" role="listbox">
 
                     <!-- Slide 1 -->
-                    <div class="carousel-item active"
-                        style="background-image: url(assets/storage/img/slide/slide-1.jpg);">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <!-- <h2 class="animate__animated animate__fadeInDown">DevCon Legazpi <span>ROADSHOW 4</span> -->
-                                <h2 class="animate__animated animate__fadeInDown">
-                                    <img src="assets/storage/icons/DEVCON_Logo_Light_Text.png" alt="" class="img-fluid"
-                                        height="200" width="300">
-                                    </span>
-                                </h2>
-                                <p class="animate__animated animate__fadeInUp">
-                                    The DevCon Legazpi is a gathering of developers, IT professionals, and tech
-                                    enthusiasts. It aims to provide a platform for learning, networking, and
-                                    collaboration opportunities. The event will feature keynote speeches from industry
-                                    leaders, hands-on workshops, panel discussions, and networking events.
-                                </p>
-                                <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill"
-                                    class="btn-get-started animate__animated animate__fadeInUp" target="_blank">
-                                    Register Now
-                                </a> -->
-                            </div>
-                        </div>
+                <div class="carousel-item active" style="background-image: url(assets/storage/img/slide/cover2.png);">
+                    <div class="carousel-container">
+                        <!-- DevCon Logo -->
+                        <h2 class="animate__animated animate__fadeInDown">
+                            <!-- <img src="assets/storage/pixels/dw.png" alt="" class="img-fluid" height="1000" width="1000"> -->
+                        </h2>
+                        <!-- Description -->
+                        <!-- <p class="animate__animated animate__fadeInUp">
+                            The DevCon Legazpi is a gathering of developers, IT professionals, and tech enthusiasts. It aims to provide a platform for learning, networking, and collaboration opportunities. The event will feature keynote speeches from industry leaders, hands-on workshops, panel discussions, and networking events.
+                        </p> -->
+                        <!-- Register Here Button -->
+                        <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill" class="btn-register" target="_blank">Register Here</a> -->
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url(assets/storage/img/slide/slide-2.jpg);">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                                <p class="animate__animated animate__fadeInUp">
-                                    Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi
-                                    nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse
-                                    doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.
-                                </p>
-                                <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill"
-                                    class="btn-get-started animate__animated animate__fadeInUp" target="_blank">
-                                    Register Now
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item" style="background-image: url(assets/storage/img/slide/slide-3.jpg);">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                    aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                    mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                    vel. Minus et tempore modi architecto.
-                                </p>
-                                <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill"
-                                    class="btn-get-started animate__animated animate__fadeInUp" target="_blank">
-                                    Register Now
-                                </a> -->
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
-                <a id="prev" class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
-                </a>
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(assets/storage/img/slide/ss2.png);">
+                    <div class="carousel-container">
+                        <!-- Title -->
+                        <!-- <h2 class="animate__animated animate__fadeInDown">Explore the World of Tech</h2> -->
+                        <!-- Description -->
+                        <!-- <p class="animate__animated animate__fadeInUp">
+                            Join us at the Legazpi City Convention Center for an unforgettable experience where technology, gaming, and cosplay collide.
+                            Learn from the best! Amazing people in tech will be sharing their knowledge, insights, and passion. Discover these programs offered by different institutions in Legazpi City.
+                        </p> -->
+                        <!-- Register Here Button -->
+                        <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill" class="btn-register" target="_blank">Register Here</a> -->
+                    </div>
+                </div>
 
-                <a id="next" class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
-                </a>
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(assets/storage/img/slide/ss3.png);">
+                    <div class="carousel-container">
+                        <!-- Title -->
+                        <!-- <h2 class="animate__animated animate__fadeInDown">Game On!</h2> -->
+                        <!-- Description -->
+                        <!-- <p class="animate__animated animate__fadeInUp">
+                            Calling all gamers! Immerse yourself in games at the event and connect with fellow gaming enthusiasts. From esports to indie gems, there's no shortage of excitement.
+                            Unleash your creativity and dress up as your favorite game characters  strike a pose, and be part of the vibrant cosplay community.</p> -->
+                        <!-- Register Here Button -->
+                        <!-- <p class="animate__animated animate__fadeInUp">
+                            The DevCon Legazpi is a gathering of developers, IT professionals, and tech enthusiasts. It aims to provide a platform for learning, networking, and collaboration opportunities. The event will feature keynote speeches from industry leaders, hands-on workshops, panel discussions, and networking events.
+                        </p> -->
+                        <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill" class="btn-register" target="_blank">Register Here</a> -->
+                    </div>
+                </div>
 
             </div>
+
+            <a id="prev" class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
+            </a>
+
+            <a id="next" class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
         </div>
     </section>
     <!-- End Hero -->
@@ -174,7 +174,33 @@
 
 
 
+    <!-- ===================== Header -> NAVIGATION ===================== -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
 
+            <div class="logo">
+                <!-- <h1 class="text-light"><a href="index.html"><span> DevCon </span></a></h1> -->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a class="scrollto" href="#hero">
+                    <img src="assets/storage/DevConLogo/Landscapecenterblack.png" alt="" class="img-fluid">
+                </a>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li> <a class="nav-link scrollto active" href="#hero"> Home </a> </li>
+                    <li> <a class="nav-link scrollto" href="#about"> About </a> </li>
+                    <li> <a class="nav-link scrollto" href="#speakers"> Speakers </a> </li>
+                    <li> <a class="nav-link scrollto" href="#partners"> Partners </a> </li>
+                    <li> <a class="nav-link scrollto" href="#agenda"> Agenda </a> </li>
+                    <li> <a class="nav-link scrollto" href="#contact"> Contact </a> </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+        </div>
+    </header>
+    <!-- End Header -->
 
 
 
@@ -202,91 +228,29 @@
     <main id="main">
 
         <!-- ===================== About Us Section ===================== -->
-        <section id="about" class="about">
+        <section id="about" class="about section-bg">
             <div class="container">
-
                 <div class="section-title">
-                    <h2 class="opposite-color-section"> About Us </h2>
-                    <p class="opposite-color-section">
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                    <h2>DEVCON LEGAZPI CITY ROADSHOW </h2>
+                    <p>
+                        Learn from tech experts, dive into gaming excitement, and unleash your creativity in the vibrant cosplay community. Organized by DEVCON Legazpi in collaboration with the Game Developers Association of the Philippines and supported by local institutions. Interested in sponsoring? Message us! Stay tuned for updates as we gear up for an electrifying weekend! 
                     </p>
                 </div>
-
-                <!-- <div class="row">
-                    <div class="col-lg-6">
-                        <img src="assets/storage/img/about.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 content">
-                        <h3>Voluptatem dignissimos <strong>provident quasi corporis voluptates</strong></h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                        </p>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident.
-                        </p>
-
-                        <div class="skills-content">
-
-                            <div class="progress">
-                                <span class="skill">HTML <i class="val">100%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">CSS <i class="val">90%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">JavaScript <i class="val">75%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="progress">
-                                <span class="skill">Photoshop <i class="val">55%</i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div> -->
-
             </div>
         </section>
         <!-- End About Us Section -->
 
         <!-- ===================== Our Members Section ===================== -->
         <section id="speakers" class="speakers">
+            <div class="stars-overlay"></div>
             <div class="container">
 
                 <div class="section-title">
-                    <h2 class="opposite-color-section"> Devcon 2024 Legazpi </h2>
-                    <p class="opposite-color-section">
-                        Meet the brilliant minds driving tech innovation forward. From <u> BLANK </u> to <u> BLANK </u>,
-                        our diverse lineup promises to inspire and inform. Join us for insightful talks and
-                        groundbreaking ideas!
-                    </p>
+                    <h2>Stay Tuned....</h2>
+                    <!-- <p>
+                        Get ready to meet the brilliant minds driving tech innovation forward. Our diverse lineup promises to inspire and inform. Join us for insightful talks and groundbreaking ideas!
+                    </p> -->
+                    
                 </div>
 
                 <div class="row">
@@ -296,15 +260,15 @@
                             <img src="assets/storage/img/speakers/speaker-1.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4> Walter White </h4>
-                                    <span> Chief Executive Officer </span>
+                                    <!-- <h4> Walter White </h4>
+                                    <span> Chief Executive Officer </span> -->
                                 </div>
-                                <div class="social">
+                                <!-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -314,15 +278,15 @@
                             <img src="assets/storage/img/speakers/speaker-2.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4> Sarah Jhonson </h4>
-                                    <span> Product Manager </span>
+                                    <!-- <h4> Sarah Jhonson </h4>
+                                    <span> Product Manager </span> -->
                                 </div>
-                                <div class="social">
+                                <!-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -332,15 +296,15 @@
                             <img src="assets/storage/img/speakers/speaker-3.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4> William Anderson </h4>
-                                    <span> CTO </span>
+                                    <!-- <h4> William Anderson </h4>
+                                    <span> CTO </span> -->
                                 </div>
-                                <div class="social">
+                                <!-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -350,15 +314,15 @@
                             <img src="assets/storage/img/speakers/speaker-4.jpg" class="img-fluid" alt="">
                             <div class="member-info">
                                 <div class="member-info-content">
-                                    <h4> Amanda Jepson </h4>
-                                    <span> Accountant </span>
+                                    <!-- <h4> Amanda Jepson </h4>
+                                    <span> Accountant </span> -->
                                 </div>
-                                <div class="social">
+                                <!-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -370,12 +334,13 @@
         <!-- End Our Members Section -->
 
         <!-- ===================== Partners Section ===================== -->
-        <section id="partners" class="partners section-bg">
+        <section id="partners" class="partners">
+            <div class="partners-stars-overlay"></div>
             <div class="container">
 
-                <div class="section-title">
-                    <h2 class="kakaiba_class"> Partners </h2>
-                    <p>
+                <div class="section-title1">
+                    <h2 class="white-light"> Partners </h2>
+                    <p class="white-light">
                         We are proud to partner with some of the most innovative and forward-thinking organizations in
                         the tech industry for this event. Our partners range from leading technology solution providers
                         to educational institutions specializing in tech-related courses, and startup accelerators.
@@ -389,9 +354,9 @@
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="partners-flters">
                             <li data-filter="*" class="filter-active"> All </li>
-                            <li data-filter=".filter-event-partners"> Event </li>
-                            <li data-filter=".filter-media-partners"> Media </li>
-                            <li data-filter=".filter-community-partners"> Community </li>
+                            <li data-filter=".filter-event-partners"> Event Partners </li>
+                            <li data-filter=".filter-media-partners"> industry Partners  </li>
+                            <li data-filter=".filter-community-partners"> School Partners </li>
                         </ul>
                     </div>
                 </div>
@@ -400,51 +365,52 @@
 
                     <div class="col-lg-4 col-md-6 partners-item filter-event-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-1.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/1.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> App 1 </h4>
-                                <p> App </p>
+                                <h4> LGU Legazpi</h4>
+                                <!-- <p> App </p> -->
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-1.jpg" data-gallery="partnersGallery"
+                                <!-- <a href="assets/storage/img/partners/1.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="App 1">
                                     <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 partners-item filter-community-partners">
+                    <div class="col-lg-4 col-md-6 partners-item filter-event-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-2.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/8.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> Web 3 </h4>
-                                <p> Web </p>
+                                <h4>Game Developers Association of the Philippines</h4>
+                                <!-- <p> App </p> -->
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-2.jpg" data-gallery="partnersGallery"
-                                    class="partners-lightbox" title="Web 3">
+                                <!-- <a href="assets/storage/img/partners/1.png" data-gallery="partnersGallery"
+                                    class="partners-lightbox" title="App 1">
                                     <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 partners-item filter-event-partners">
+                  
+
+                    <!-- <div class="col-lg-4 col-md-6 partners-item filter-event-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-3.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/3.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> App 2 </h4>
+                                <h4> DOST - V</h4>
                                 <p> App </p>
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-3.jpg" data-gallery="partnersGallery"
+                                <a href="assets/storage/img/partners/3.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="App 2">
                                     <i class="bx bx-plus"></i>
                                 </a>
@@ -453,121 +419,83 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-4 col-md-6 partners-item filter-media-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-4.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/4.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> Card 2 </h4>
-                                <p> Card </p>
+                                <h4> TESDA - V </h4>
+                                <!-- <p> Card </p> -->
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-4.jpg" data-gallery="partnersGallery"
+                                <!-- <a href="assets/storage/img/partners/4.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="Card 2">
                                     <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-media-partners">
+                        <div class="partners-wrap">
+                            <img src="assets/storage/img/partners/9.png" class="img-fluid" alt="">
+                            <div class="partners-info">
+                                <h4> TESDA - V </h4>
+                                <!-- <p> Card </p> -->
+                            </div>
+                            <div class="partners-links">
+                                <!-- <a href="assets/storage/img/partners/4.png" data-gallery="partnersGallery"
+                                    class="partners-lightbox" title="Card 2">
+                                    <i class="bx bx-plus"></i>
                                 </a>
+                                <a href="partners-details.html" title="More Details">
+                                    <i class="bx bx-link"></i>
+                                </a> -->
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 partners-item filter-community-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-5.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/5.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> Web 2 </h4>
-                                <p> Web </p>
+                                <h4> DTI - V </h4>
+                                <!-- <p> Web </p> -->
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-5.jpg" data-gallery="partnersGallery"
+                                <!-- <a href="assets/storage/img/partners/5.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="Web 2">
                                     <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 partners-item filter-event-partners">
                         <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-6.jpg" class="img-fluid" alt="">
+                            <img src="assets/storage/img/partners/6.png" class="img-fluid" alt="">
                             <div class="partners-info">
-                                <h4> App 3 </h4>
-                                <p> App </p>
+                                <h4> Quanby IT Solutons </h4>
+                                <!-- <p> App </p> -->
                             </div>
                             <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-6.jpg" data-gallery="partnersGallery"
+                                <!-- <a href="assets/storage/img/partners/6.png" data-gallery="partnersGallery"
                                     class="partners-lightbox" title="App 3">
                                     <i class="bx bx-plus"></i>
                                 </a>
                                 <a href="partners-details.html" title="More Details">
                                     <i class="bx bx-link"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 partners-item filter-media-partners">
-                        <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-7.jpg" class="img-fluid" alt="">
-                            <div class="partners-info">
-                                <h4> Card 1 </h4>
-                                <p> Card </p>
-                            </div>
-                            <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-7.jpg" data-gallery="partnersGallery"
-                                    class="partners-lightbox" title="Card 1">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="partners-details.html" title="More Details">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 partners-item filter-media-partners">
-                        <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-8.jpg" class="img-fluid" alt="">
-                            <div class="partners-info">
-                                <h4> Card 3 </h4>
-                                <p> Card </p>
-                            </div>
-                            <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-8.jpg" data-gallery="partnersGallery"
-                                    class="partners-lightbox" title="Card 3">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="partners-details.html" title="More Details">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 partners-item filter-community-partners">
-                        <div class="partners-wrap">
-                            <img src="assets/storage/img/partners/partners-9.jpg" class="img-fluid" alt="">
-                            <div class="partners-info">
-                                <h4> Web 3 </h4>
-                                <p> Web </p>
-                            </div>
-                            <div class="partners-links">
-                                <a href="assets/storage/img/partners/partners-9.jpg" data-gallery="partnersGallery"
-                                    class="partners-lightbox" title="Web 3">
-                                    <i class="bx bx-plus"></i>
-                                </a>
-                                <a href="partners-details.html" title="More Details">
-                                    <i class="bx bx-link"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
@@ -576,7 +504,7 @@
         <!-- End Partners Section -->
 
         <!-- ===================== Counts Section ===================== -->
-        <section class="counts section-bg">
+        <!-- <section class="counts section-bg">
             <div class="container">
 
                 <div class="row no-gutters">
@@ -624,15 +552,16 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Counts Section -->
 
         <!-- ===================== Our Agenda Section ===================== -->
-        <section id="agenda" class="agenda">
+        <!-- <section id="agenda" class="agenda">
+            <div class="agenda-stars-overlay"></div>
             <div class="container">
 
                 <div class="section-title">
-                    <h2 class="opposite-color-section"> Our Agenda </h2>
+                    <h2 class="opposite-color-section"> Event Programme </h2>
                     <p class="opposite-color-section">
                         Dive into a day filled with exploration, learning, and collaboration as we navigate through four
                         captivating sections. Each segment is designed to offer unique insights and experiences,
@@ -738,16 +667,18 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Our Agenda Section -->
 
         <!-- ===================== CTA Section ===================== -->
-        <section class="cta">
+        <section class="cta" >
             <div class="container">
 
                 <div class="text-center">
                     <h3> WHAT ARE YOU WAITING FOR! </h3>
-                    <p>
+                    <!-- <a href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill"
+                        class="btn-register underline" target="_blank">Register Here</a> -->
+                    <p class="mt-2">
                         Get ready to immerse yourself in a day packed with insightful keynote presentations, engaging
                         panel discussions, hands-on workshops, and invaluable networking opportunities. Join us on April
                         15-16, 2024, at Devcon 2024 Legazpi Roadshow as we explore the forefront of technology, share
@@ -755,11 +686,6 @@
                         be a part of the future of tech. Reserve your spot now and let's embark on this journey
                         together!"
                     </p>
-                    <!-- <a class="cta-btn"
-                        href="https://docs.google.com/forms/d/1fOZOGfI3awD8ggMAV7fObqHfm_JUz8jasG1VbeoQ7qs/prefill"
-                        target="_blank">
-                        Register Now
-                    </a> -->
                 </div>
 
             </div>
@@ -768,53 +694,44 @@
 
         <!-- ===================== More Agenda Section ===================== -->
         <section class="more-agenda section-bg">
+            <div class="more-agenda-stars-overlay"></div>
             <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="card">
-                            <img src="assets/storage/img/more-service-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href=""> Building </a></h5>
-                                <p class="card-text">
-                                    This is the image of the building where the event will happen.
-                                </p>
-                            </div>
-                        </div>
+              <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                  <div class="card card-fixed-size">
+                    <img src="assets/storage/img/address.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href=""> Building </a></h5>
+                      <p class="card-text"> The world of tech, gaming, and cosplay right at the heart of Legazpi City </p>
                     </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="card">
-                            <img src="assets/storage/img/more-service-2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href=""> Map </a></h5>
-                                <p class="card-text">
-                                    Ut quas omnis est. Non et aut tempora dignissimos similique in dignissimos. Sit
-                                    incidunt et odit iusto
-                                </p>
-                                <a class="btn scrollto" href="#"> Visit Google Maps </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                        <div class="card">
-                            <img src="assets/storage/img/more-service-3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href=""> Address </a></h5>
-                                <p class="card-text">
-                                    Bicol University <br>
-                                    College of <u> BLANK </u>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                  <div class="card card-fixed-size">
+                    <div id="map" class="card-img-top map-small-view"></div>
+                    <div class="card-body">
+                      <h5 class="card-title"><a href=""> Map </a></h5>
+                      <p class="card-text"> Save the date - April 15-16, 2024! See you there! <br>Join us for the DEVCON Legazpi Roadshow </p>
+                      <a class="btn scrollto" href="view-map.html" target="_blank"> Visit Maps </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                  <div class="card card-fixed-size">
+                    <img src="assets/storage/img/building.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"><a href=""> Address </a></h5>
+                      <p class="card-text"> Legazpi City Convention Center <br> Airport Rd, Legazpi City, Philippines. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
         <!-- End More Agenda Section -->
 
         <!-- ===================== Info Box Section ===================== -->
-        <section class="info-box py-0">
+        <section id="infobox" section class="info-box py-0">
             <div class="container-fluid">
 
                 <div class="row">
@@ -889,7 +806,7 @@
                     </div>
 
                     <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img"
-                        style="background-image: url(assets/storage/img/info-box.jpg);">&nbsp;</div>
+                        style="background-image: url(assets/storage/img/slide/cover2.png);">&nbsp;</div>
                 </div>
 
             </div>
@@ -897,15 +814,13 @@
         <!-- End Info Box Section -->
 
         <!-- ===================== Contact Us Section ===================== -->
-        <section id="contact" class="contact section-bg">
-
+        <!-- <section id="contact" class="contact">
+            <div class="contact-stars-overlay"></div>
             <div class="container">
                 <div class="section-title">
                     <h2> Contact Us </h2>
                     <p>
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+                        Interested to sponsor? Message us and let us promote your tech biz or your tech university!
                     </p>
                 </div>
             </div>
@@ -985,7 +900,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End Contact Us Section -->
 
     </main>
@@ -1026,25 +941,26 @@
 
                     <div class="col-lg-3 col-md-6 footer-info">
                         <a class="scrollto" href="#hero">
-                            <img src="assets/storage/icons/DEVCON_Logo_Light_Text.png" alt="" class="img-fluid"
-                                height="200" width="150">
+                            <img src="assets/storage/img/roadshow.png" alt="" class="img-fluid" height="200"
+                                width="150">
                         </a>
                         <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            Legazpi City, Philippines
+                            <br><br>
+
+                            <!-- <strong>Phone:</strong> +63 5589 55488 55<br>
+                            <strong>Email:</strong> devcon@example.com<br> -->
                         </p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+                            <a href="https://www.facebook.com/devconlegazpi" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-md-6 footer-links">
+                    <!-- <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#"> Home </a></li>
@@ -1053,9 +969,9 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#"> Terms of service </a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#"> Privacy policy </a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-3 col-md-6 footer-links">
+                    <!-- <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Agenda</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -1064,14 +980,14 @@
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
-                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                        <form action="" method="post">
+                        <p>Subscribe for exclusive event updates</p>
+                         <form action="">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form>
+                        </form> 
 
                     </div>
 
@@ -1081,10 +997,10 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>DevCon</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>DEVCON Legazpix</span></strong>. All Rights Reserved
             </div>
             <!-- <div class="credits">
-                Mod by <a href="">joemar25</a>
+                Mod by <a href="">DevConLegazpi-Developers</a>
             </div> -->
         </div>
     </footer>
@@ -1140,6 +1056,7 @@
 
     <!-- external script -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

@@ -19,6 +19,7 @@
   background: var(--text-color-light);
 }
 
+
 .primary-bg {
   background: var(--primary);
 }
@@ -60,6 +61,22 @@ a {
 a:hover {
   text-decoration: none;
   color: #2ae0c4;
+}
+
+/*--------------------------------------------------------------
+# Pre-loader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -176,10 +193,20 @@ a:hover {
 }
 
 .navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
 .navbar li:hover > a {
   color: var(--secondary);
+  font-size: larger;
+}
+
+.navbar .active,
+.navbar .active:focus{
+  font-size: larger;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #F2D72E, #DA621D, #8B27FF, #6EB103);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
 .navbar .getstarted,
@@ -395,22 +422,62 @@ a:hover {
   background-color: rgba(21, 27, 26, 0.7);
   position: absolute;
   height: 100vh;
-  width: 100%;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  background: linear-gradient(to right, rgba(21, 27, 26, 0.8) 0%, rgba(21, 27, 26, 0) 20%, rgba(21, 27, 26, 0) 80%, rgba(21, 27, 26, 0.8) 100%);
 }
-
 #hero .carousel-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
+  height: 100%;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  text-align: center;
+}
+
+#hero .btn-register {
+  position: relative;
+  top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-radius: 25px;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: #16141f;
+  overflow: hidden;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 5ms;
+}
+
+#hero .btn-register::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  background: linear-gradient(to right, #F2D72E, #DA621D, #8B27FF, #6EB103);
+  -webkit-mask: linear-gradient(#FFF 0 0) content-box, linear-gradient(#FFF 0 0);
+  -webkit-mask-composite: destination-out;
+  border-radius: 25px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+#hero .btn-register:hover {
+  color: yellow;
 }
 
 #hero .carousel-content {
@@ -535,24 +602,29 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
-
-.section-title .opposite-color-section {
-  color: var(--text-color-dark);
+.section-title1 {
+  text-align: center;
+  padding-bottom: 30px;
 }
-
+.white-light {
+  color: var(--text-color-light);
+}
 .section-title h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 1000;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: var(--text-color-light);
+  /* color: var(--text-color-light); */
+  color: var(--text-color-dark);
 }
 
 .section-title p {
   margin-bottom: 0;
-  color: var(--text-color-light);
+  /* color: var(--text-color-light); */
+  color: var(--text-color-dark);
 }
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -605,6 +677,17 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+
+.about {
+  width: 100vw; 
+  max-width: 100%; 
+  /* background-image: url('../storage/bg/violet.svg'); */
+  background-color: white;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: bottom center;
+}
+
 .about .content p {
   color: var(--text-color-dark);
 }
@@ -668,6 +751,15 @@ section {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+.counts {
+  width: 100vw; 
+  max-width: 100%; 
+  background-image: url('../storage/bg/mixed.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; 
+}
+
 .counts .count-box {
   box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -715,6 +807,28 @@ section {
 /*--------------------------------------------------------------
 # Our Agenda
 --------------------------------------------------------------*/
+.agenda {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.agenda-stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../storage/bg/stars.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  background-attachment: fixed;
+  mask-image: linear-gradient(to bottom, transparent, black 20%);
+}
+
 .agenda .icon-box {
   padding: 30px;
   position: relative;
@@ -729,7 +843,7 @@ section {
 .agenda .icon-box::before {
   content: "";
   position: absolute;
-  background: var(--secondary);
+  background: var(--quaternary);
   right: -60px;
   top: -40px;
   width: 100px;
@@ -740,7 +854,7 @@ section {
 }
 
 .agenda .icon-box:hover::before {
-  background: var(--secondary);
+  background: var(--quaternary);
   right: 0;
   top: 0;
   width: 100%;
@@ -756,7 +870,7 @@ section {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: var(--secondary);
+  background: var(--quaternary);
   transition: all 0.3s ease-in-out;
 }
 
@@ -773,7 +887,7 @@ section {
 }
 
 .agenda .title a {
-  color: var(--secondary);
+  color: var(--quaternary);
 }
 
 .agenda .description ul li {
@@ -793,15 +907,47 @@ section {
 }
 
 .agenda .icon-box:hover .icon i {
-  color: var(--secondary);
+  color: var(--quaternary);
+}
+
+.map-small-view {
+  height: 300px;
 }
 
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
+
+
+.cta {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta .btn-register {
+  position: relative;
+  top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-radius: 25px;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: #6EB103;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cta .btn-register:hover {
+  background: orange;
+}
+
 .cta {
   background: linear-gradient(rgba(66, 84, 81, 0.5), rgba(43, 56, 54, 0.5)),
-    url("../storage/img/cta-bg.jpg") fixed center center;
+    url("../storage/img/slide/slide-1.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -813,30 +959,50 @@ section {
 }
 
 .cta p {
+  padding: 20px;
   color: var(--text-color-light);
-}
-
-.cta .cta-btn {
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 25px;
-  transition: 0.5s;
-  margin-top: 10px;
-  border: 2px solid var(--text-color-light);
-  background: var(--secondary);
-  color: var(--text-color-light);
-}
-
-.cta .cta-btn:hover {
-  background: var(--quaternary);
 }
 
 /*--------------------------------------------------------------
 # More Agenda
 --------------------------------------------------------------*/
+/* .more-agenda {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  background-image: linear-gradient(to left bottom, #e8ca04, #9ec337, #5eb45b, #22a074, #00897f);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+
+.more-agenda {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  background-image: url('../storage/img/bgground.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.more-agenda-stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../storage/bg/starswhite.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .more-agenda img {
   border-radius: 0;
 }
@@ -854,24 +1020,44 @@ section {
 .more-agenda .card-title a {
   font-weight: 600;
   font-size: 18px;
-  color: var(--secondary);
+  color: var(--primary);
   transition: ease-in-out 0.3s;
 }
 
 .more-agenda .card-title a:hover {
-  color: var(--tertiary);
+  color: var(--secondary);
 }
 
 .more-agenda .btn {
   border-radius: 50px;
   padding: 4px 30px 6px 30px;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--primary);
 }
 
 .more-agenda .btn:hover {
   color: var(--text-color-light);
-  border: 2px solid var(--text-color-dark);
-  background: var(--tertiary);
+  background: var(--secondary);
+  border: 2px solid var(--secondary);
+}
+.card-fixed-size {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-fixed-size .card-img-top {
+  height: 200px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.card-fixed-size .card-body {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.map-small-view {
+  height: 200px; /* Adjust the height as needed */
 }
 
 /*--------------------------------------------------------------
@@ -1008,6 +1194,32 @@ section {
 /*--------------------------------------------------------------
 # Our partners
 --------------------------------------------------------------*/
+.partners {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  background-image: url('../storage/img/redbg.png');
+  background-size: cover;
+  background-position: center;
+}
+/* .partners { position: relative; width: 100vw; max-width: 100%; overflow: hidden; background-image: linear-gradient(to right top, #0069ff, #2e5dff, #4c4dff, #6638ff, #7f08ff); } */
+
+.partners-stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../storage/bg/stars.svg');
+  background-size: cover;
+background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  background-attachment: fixed;
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
+}
+
 .partners .partners-item {
   margin-bottom: 30px;
 }
@@ -1038,7 +1250,7 @@ section {
 
 .partners #partners-flters li:hover,
 .partners #partners-flters li.filter-active {
-  color: var(--tertiary);
+  color: var(--quaternary);
 }
 
 .partners #partners-flters li:last-child {
@@ -1046,6 +1258,7 @@ section {
 }
 
 .partners .partners-wrap {
+  background-color: white;
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -1054,7 +1267,7 @@ section {
 
 .partners .partners-wrap::before {
   content: "";
-  background: rgba(88, 113, 109, 0.6);
+  background: rgba(88, 113, 95, 0.6);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -1204,8 +1417,38 @@ section {
 # Our Speakers
 --------------------------------------------------------------*/
 .speakers {
-  background: var(--text-color-light);
-  padding: 60px 0;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  /* background-image: linear-gradient(to right top, #0069ff, #2e5dff, #4c4dff, #6638ff, #7f08ff); */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../storage/bg/starswhite.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  background-attachment: fixed;
+  mask-image: linear-gradient(to bottom, transparent, black);
+}
+
+.speakers h2{
+  color: white;
+}
+
+.speakers p{
+  color: white;
 }
 
 .speakers .member {
@@ -1298,6 +1541,28 @@ section {
 /*--------------------------------------------------------------
 # Contact Us
 --------------------------------------------------------------*/
+.contact {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.contact-stars-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../storage/bg/stars.svg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  background-attachment: fixed;
+  mask-image: linear-gradient(to bottom, transparent, black 30%);
+}
+
 .contact .infos {
   position: relative;
   z-index: 2;
@@ -1476,15 +1741,15 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #344341;
+  background: #16141f;
   padding: 0 0 30px 0;
   color: var(--text-color-light);
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #3d4f4c;
-  border-bottom: 1px solid #4d635f;
+  background: var(--text-color-dark);
+  border-bottom: 1px solid var(--tertiary);
   padding: 60px 0 30px 0;
 }
 
@@ -1609,6 +1874,7 @@ section {
 }
 
 #footer .copyright {
+  background: #16141f;
   text-align: center;
   padding-top: 30px;
 }
@@ -1618,4 +1884,28 @@ section {
   text-align: center;
   font-size: 13px;
   color: var(--text-color-light);
+}
+
+/*--------------------------------------------------------------
+# View-Map
+--------------------------------------------------------------*/
+.leaflet-routing-alternatives-container {
+  color: var(--text-color-dark);
+  background: var(--text-color-light);
+} 
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden,
+  .fade-in {
+    transition: none;
+  }
 }

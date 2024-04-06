@@ -4,8 +4,19 @@
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
  */
+
 (function () {
   "use strict";
+
+   /**
+   * Preloader
+   */
+  window.addEventListener('load', function() {
+    var preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  });
 
   /**
    * Easy selector helper function
@@ -115,6 +126,25 @@
           "'></li>");
   });
 
+  /**
+   * Background scroll effect
+   */
+  onscroll(document, () => {
+    const scrolledY = window.scrollY;
+    const sections = [
+      select(".stars-overlay"), 
+      select(".partners-stars-overlay"), 
+      select(".agenda-stars-overlay"), 
+      select(".more-agenda-stars-overlay"), 
+      select(".contact-stars-overlay")];
+  
+    sections.forEach(section => {
+      if (section) {
+        section.style.backgroundPosition = 'center ' + (scrolledY * 0.2) + 'px';
+      }
+    });
+  });
+  
   /**
    * Back to top button
    */
@@ -267,17 +297,26 @@
   new PureCounter();
 })();
 
-// mar
-let intervalId = setInterval(function () {
-  document.getElementById("next").click();
-}, 5000);
 
-const resetInterval = () => {
-  clearInterval(intervalId);
-  intervalId = setInterval(function () {
-    document.getElementById("next").click();
-  }, 5000);
+const sections = document.querySelectorAll('section');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1, // Adjust this value to control when the animation should trigger
 };
 
-document.getElementById("next").addEventListener("click", resetInterval);
-document.getElementById("prev").addEventListener("click", resetInterval);
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = entry.target;
+      target.classList.add('fade-in');
+      observer.unobserve(target);
+    }
+  });
+}, options);
+
+sections.forEach(section => {
+  section.classList.add('hidden');
+  observer.observe(section);
+});
