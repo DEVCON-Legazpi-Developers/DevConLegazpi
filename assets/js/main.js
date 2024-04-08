@@ -81,3 +81,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   handleMap();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const colors = ['primary', 'secondary', 'tertiary', 'quaternary'];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  const preloader = document.getElementById('preloader');
+
+  preloader.style.backgroundColor = getComputedStyle(document.documentElement)
+    .getPropertyValue(`--${randomColor}`);
+
+  setTimeout(function () {
+    preloader.style.display = 'none';
+  }, 5000);
+});

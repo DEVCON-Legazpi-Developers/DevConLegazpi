@@ -19,7 +19,6 @@
   background: var(--text-color-light);
 }
 
-
 .primary-bg {
   background: var(--primary);
 }
@@ -199,10 +198,16 @@ a:hover {
 }
 
 .navbar .active,
-.navbar .active:focus{
+.navbar .active:focus {
   font-size: larger;
   font-weight: 700;
-  background-image: linear-gradient(to right, #F2D72E, #DA621D, #8B27FF, #6EB103);
+  background-image: linear-gradient(
+    to right,
+    #f2d72e,
+    #da621d,
+    #8b27ff,
+    #6eb103
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -426,7 +431,13 @@ a:hover {
   right: 0;
   left: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(21, 27, 26, 0.8) 0%, rgba(21, 27, 26, 0) 20%, rgba(21, 27, 26, 0) 80%, rgba(21, 27, 26, 0.8) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(21, 27, 26, 0.8) 0%,
+    rgba(21, 27, 26, 0) 20%,
+    rgba(21, 27, 26, 0) 80%,
+    rgba(21, 27, 26, 0.8) 100%
+  );
 }
 #hero .carousel-container {
   display: flex;
@@ -448,7 +459,7 @@ a:hover {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 25px;
   z-index: 1;
   cursor: pointer;
@@ -461,15 +472,15 @@ a:hover {
 }
 
 #hero .btn-register::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 3px;
-  background: linear-gradient(to right, #F2D72E, #DA621D, #8B27FF, #6EB103);
-  -webkit-mask: linear-gradient(#FFF 0 0) content-box, linear-gradient(#FFF 0 0);
+  background: linear-gradient(to right, #f2d72e, #da621d, #8b27ff, #6eb103);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   border-radius: 25px;
   z-index: -1;
@@ -602,6 +613,10 @@ section {
   text-align: center;
   padding-bottom: 30px;
 }
+#speakers .section-title p,
+#speakers .section-title h2{
+  color: var(--text-color-dark);
+}
 .section-title1 {
   text-align: center;
   padding-bottom: 30px;
@@ -624,7 +639,6 @@ section {
   /* color: var(--text-color-light); */
   color: var(--text-color-dark);
 }
-
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -679,8 +693,8 @@ section {
 --------------------------------------------------------------*/
 
 .about {
-  width: 100vw; 
-  max-width: 100%; 
+  width: 100vw;
+  max-width: 100%;
   /* background-image: url('../storage/bg/violet.svg'); */
   background-color: white;
   background-size: cover;
@@ -752,12 +766,12 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts {
-  width: 100vw; 
-  max-width: 100%; 
-  background-image: url('../storage/bg/mixed.svg');
+  width: 100vw;
+  max-width: 100%;
+  background-image: url("../storage/bg/mixed.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center; 
+  background-position: top center;
 }
 
 .counts .count-box {
@@ -815,12 +829,12 @@ section {
 }
 
 .agenda-stars-overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../storage/bg/stars.svg');
+  background-image: url("../storage/bg/stars.svg");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -918,7 +932,6 @@ section {
 # Cta
 --------------------------------------------------------------*/
 
-
 .cta {
   display: flex;
   flex-direction: column;
@@ -930,12 +943,12 @@ section {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 25px;
   z-index: 1;
   cursor: pointer;
   transition: color 0.3s ease;
-  background: #6EB103;
+  background: #6eb103;
   overflow: hidden;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -982,7 +995,7 @@ section {
   position: relative;
   width: 100vw;
   max-width: 100%;
-  background-image: url('../storage/img/bgground.png');
+  background-image: url("../storage/img/bgground.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -996,7 +1009,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../storage/bg/starswhite.svg');
+  background-image: url("../storage/bg/starswhite.svg");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -1087,8 +1100,8 @@ section {
 .info-box .img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 400px;
+  /* background-position: center center; */
+  min-height: 200px;
 }
 
 .info-box .accordion-list {
@@ -1199,7 +1212,7 @@ section {
   width: 100vw;
   max-width: 100%;
   overflow: hidden;
-  background-image: url('../storage/img/redbg.png');
+  background-image: url("../storage/img/redbg.png");
   background-size: cover;
   background-position: center;
 }
@@ -1211,9 +1224,9 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../storage/bg/stars.svg');
+  background-image: url("../storage/bg/stars.svg");
   background-size: cover;
-background-repeat: repeat;
+  background-repeat: repeat;
   background-position: center;
   z-index: 0;
   background-attachment: fixed;
@@ -1434,7 +1447,7 @@ background-repeat: repeat;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../storage/bg/starswhite.svg');
+  background-image: url("../storage/bg/starswhite.svg");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -1443,11 +1456,11 @@ background-repeat: repeat;
   mask-image: linear-gradient(to bottom, transparent, black);
 }
 
-.speakers h2{
+.speakers h2 {
   color: white;
 }
 
-.speakers p{
+.speakers p {
   color: white;
 }
 
@@ -1554,7 +1567,7 @@ background-repeat: repeat;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../storage/bg/stars.svg');
+  background-image: url("../storage/bg/stars.svg");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -1892,7 +1905,7 @@ background-repeat: repeat;
 .leaflet-routing-alternatives-container {
   color: var(--text-color-dark);
   background: var(--text-color-light);
-} 
+}
 
 .hidden {
   opacity: 0;
