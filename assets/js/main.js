@@ -34,7 +34,7 @@ function handleMap() {
 
   // Destination marker
   var destinationMarker = L.marker([
-    13.14296603047238, 123.72784155447115,
+    13.152140, 123.732491,
   ]).addTo(map);
 
   // Tooltip for destination marker
@@ -62,8 +62,8 @@ function handleMap() {
     // Initialize routing control after getting current location
     L.Routing.control({
       waypoints: [
+        L.latLng(13.152140, 123.732491), // Destination
         L.latLng(latitude, longitude), // Origin
-        L.latLng(13.14296603047238, 123.72784155447115), // Destination
       ],
       routeWhileDragging: true,
       addWaypoints: false,
