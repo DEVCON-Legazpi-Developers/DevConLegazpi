@@ -1,3 +1,43 @@
+const viewPdfBtn = document.getElementById('viewPdfBtn');
+const pdfModal = document.getElementById('pdfModal');
+const closePdfModal = document.getElementById('closePdfModal');
+const pdfViewer = document.getElementById('pdfViewer');
+
+// PDF file URL
+const pdfUrl = 'assets/storage/pdf/roadshow_programflow.pdf';
+
+// Function to open the modal
+function openPdfModal() {
+  pdfViewer.src = pdfUrl; // Set the PDF file URL to the viewer iframe src attribute
+  pdfModal.style.display = 'block'; // Show the modal
+}
+
+// Function to close the modal
+function closePdfModalFunction() {
+  pdfModal.style.display = 'none'; // Hide the modal
+  pdfViewer.src = ''; // Clear the PDF viewer iframe src
+}
+
+// Add click event listener to the button to open the modal
+viewPdfBtn.addEventListener('click', openPdfModal);
+
+// Add click event listener to the close button in the modal to close it
+closePdfModal.addEventListener('click', closePdfModalFunction);
+
+// Close the modal if the user clicks outside of it
+window.addEventListener('click', function(event) {
+  if (event.target === pdfModal) {
+    closePdfModalFunction();
+  }
+});
+
+// Close the modal if the user presses the Esc key
+window.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && pdfModal.style.display === 'block') {
+    closePdfModalFunction();
+  }
+});
+
 // carousel
 function handleCarousel() {
   let nextElement = document.getElementById("next");
