@@ -37,10 +37,10 @@
 </head>
 
 <body>
-    
+
     <div id="preloader">
         <img src="assets/storage/icons/pre-loader.gif" alt="Loading..." style="width: 100px;">
-    </div>      
+    </div>
 
 
 
@@ -69,8 +69,8 @@
                     <li> <a class="nav-link scrollto" href="#about"> About </a> </li>
                     <li> <a class="nav-link scrollto" href="#speakers"> Speakers </a> </li>
                     <li> <a class="nav-link scrollto" href="#partners"> Partners </a> </li>
-                    <li> <a class="nav-link scrollto" href="#agenda"> Agenda </a> </li>
-                    <li> <a class="nav-link scrollto" href="#contact"> Contact </a> </li>
+                    <li> <a class="nav-link scrollto" href="#infobox"> FaQ </a> </li>
+                    <li> <a class="nav-link scrollto" href="#footer"> Contact </a> </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -93,15 +93,21 @@
 
                 <div class="carousel-inner" role="listbox">
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url(assets/storage/img/slide/cover2.png);">
+                    <div class="carousel-item active"
+                        style="background-image: url(assets/storage/img/slide/cover2.png);">
                         <div class="carousel-container">
-                            <h2 class="animate__animated animate__fadeInDown"></h2>
+                            <a href="https://www.facebook.com/devconlegazpi"  target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto"> Register </a>
                         </div>
                     </div>
-
+                    
                     <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url(assets/storage/img/slide/ss2.png);">
-                        <div class="carousel-container"></div>
+                    <div class="carousel-item" style="background-image: url(assets/storage/img/slide/sss2.png);">
+                        <div class="carousel-container">
+                            <a href="https://www.facebook.com/devconlegazpi" target="_blank" class="btn-get-fb-page animate__animated animate__fadeInUp scrollto"> 
+                                <i class="bi bi-facebook"></i>
+                                devconlegazpi
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Slide 3 -->
@@ -129,34 +135,44 @@
     <main id="main">
 
         <!-- ===================== About Us Section ===================== -->
-      <!-- About Section -->
-<section id="about" class="about" style="background-color: #f8f9fa;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                <div class="embed-responsive embed-responsive-16by9">4
-                    <video class="embed-responsive-item" src="assets/storage/vid/DEVCONfinalpre-ev_vid.mp4" autoplay muted controls style="border: none;"></video>
+        <!-- About Section -->
+        <section id="about" class="about" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                        <div class="embed-responsive embed-responsive-16by9">4
+                            <video class="embed-responsive-item" src="assets/storage/vid/DEVCONfinalpre-ev_vid.mp4"
+                                autoplay muted controls style="border: none;"></video>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="section-title">
+                            <h2 style="color: #3e4551;"><span class="devcon-color">DEVCON LEGAZPI</span> CITY ROADSHOW
+                            </h2>
+                        </div>
+                        <p style="color: #6c757d;">
+                            Learn from tech experts, dive into gaming excitement, and unleash your creativity in the
+                            vibrant cosplay community.<span class="devcon-sentence"> Organized by DEVCON Legazpi in
+                                collaboration with the Game Developers Association of the Philippines and supported by
+                                local institutions.</span>
+                        </p>
+                        <ul style="color: #6c757d;">
+                            <li><i class="ri-check-double-line" style="color: #28a745;"></i> Gain insights from industry
+                                professionals</li>
+                            <li><i class="ri-check-double-line" style="color: #28a745;"></i> Explore the latest trends
+                                in gaming</li>
+                            <li><i class="ri-check-double-line" style="color: #28a745;"></i> Showcase your creativity in
+                                cosplay</li>
+                        </ul>
+                        <p style="color: #6c757d;">
+                            Interested in sponsoring? Message us! Stay tuned for updates as we gear up for an
+                            electrifying weekend!
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-                <div class="section-title">
-                    <h2 style="color: #3e4551;"><span class="devcon-color">DEVCON LEGAZPI</span> CITY ROADSHOW</h2>
-                </div>
-                <p style="color: #6c757d;">
-                    Learn from tech experts, dive into gaming excitement, and unleash your creativity in the vibrant cosplay community.<span class="devcon-sentence"> Organized by DEVCON Legazpi in collaboration with the Game Developers Association of the Philippines and supported by local institutions.</span>
-                </p>
-                <ul style="color: #6c757d;">
-                    <li><i class="ri-check-double-line" style="color: #28a745;"></i> Gain insights from industry professionals</li>
-                    <li><i class="ri-check-double-line" style="color: #28a745;"></i> Explore the latest trends in gaming</li>
-                    <li><i class="ri-check-double-line" style="color: #28a745;"></i> Showcase your creativity in cosplay</li>
-                </ul>
-                <p style="color: #6c757d;">
-                    Interested in sponsoring? Message us! Stay tuned for updates as we gear up for an electrifying weekend!
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- ===================== Our Members Section ===================== -->
         <section id="speakers" class="speakers">
@@ -165,86 +181,90 @@
                 <div class="section-title">
                     <h2 class="text-black">Unveiling the Visionaries</h2>
                     <p class="text-black">
-                      Prepare to be inspired by a stellar lineup of visionary speakers! We are thrilled to announce that we will soon reveal the extraordinary individuals who will grace our stage. These trailblazers are ready to share their groundbreaking ideas, remarkable experiences, and transformative insights with you. Get ready to embark on a journey of innovation and discovery. Stay tuned for the grand unveiling!
+                        Prepare to be inspired by a stellar lineup of visionary speakers! We are thrilled to announce
+                        that we will soon reveal the extraordinary individuals who will grace our stage. These
+                        trailblazers are ready to share their groundbreaking ideas, remarkable experiences, and
+                        transformative insights with you. Get ready to embark on a journey of innovation and discovery.
+                        Stay tuned for the grand unveiling!
                     </p>
-                  </div>
+                </div>
             </div>
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="member">
-                            <img src="assets/storage/img/speakers/speaker-1.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <!-- <h4> Walter White </h4>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="member">
+                        <img src="assets/storage/img/speakers/speaker-1.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <!-- <h4> Walter White </h4>
                                     <span> Chief Executive Officer </span> -->
-                                </div>
-                                <!-- <div class="social">
+                            </div>
+                            <!-- <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div> -->
-                            </div>
                         </div>
                     </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
-                        <div class="member">
-                            <img src="assets/storage/img/speakers/speaker-2.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <!-- <h4> Sarah Jhonson </h4>
-                                    <span> Product Manager </span> -->
-                                </div>
-                                <!-- <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
-                        <div class="member">
-                            <img src="assets/storage/img/speakers/speaker-3.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <!-- <h4> William Anderson </h4>
-                                    <span> CTO </span> -->
-                                </div>
-                                <!-- <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
-                        <div class="member">
-                            <img src="assets/storage/img/speakers/speaker-4.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <!-- <h4> Amanda Jepson </h4>
-                                    <span> Accountant </span> -->
-                                </div>
-                                <!-- <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="assets/storage/img/speakers/speaker-2.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <!-- <h4> Sarah Jhonson </h4>
+                                    <span> Product Manager </span> -->
+                            </div>
+                            <!-- <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                    <div class="member">
+                        <img src="assets/storage/img/speakers/speaker-3.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <!-- <h4> William Anderson </h4>
+                                    <span> CTO </span> -->
+                            </div>
+                            <!-- <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+                    <div class="member">
+                        <img src="assets/storage/img/speakers/speaker-4.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <!-- <h4> Amanda Jepson </h4>
+                                    <span> Accountant </span> -->
+                            </div>
+                            <!-- <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
             </div>
         </section>
@@ -272,7 +292,7 @@
                         <ul id="partners-flters">
                             <li data-filter="*" class="filter-active"> All </li>
                             <li data-filter=".filter-government-partners"> Government Partners</li>
-                            <li data-filter=".filter-industry-partners"> industry Partners  </li>
+                            <li data-filter=".filter-industry-partners"> industry Partners </li>
                             <li data-filter=".filter-school-partners"> School Partners </li>
                         </ul>
                     </div>
@@ -282,26 +302,26 @@
 
                     <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://legazpi.gov.ph/">
-                            <img src="assets/storage/img/partners/1.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>LGU Legazpi</h4>
-                          </div>
+                            <a href="https://legazpi.gov.ph/">
+                                <img src="assets/storage/img/partners/1.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>LGU Legazpi</h4>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                     <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/gdapglobal" target="_blank">
-                            <img src="assets/storage/img/partners/8.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Game Developers Association of the Philippines</h4>
-                          </div>
+                            <a href="https://www.facebook.com/gdapglobal" target="_blank">
+                                <img src="assets/storage/img/partners/8.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Game Developers Association of the Philippines</h4>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                       <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
                         <div class="partners-wrap">
                           <a href="https://www.facebook.com/DICTRegionVBicol" target="_blank">
@@ -313,129 +333,129 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/profile.php?id=100072503317481" target="_blank">
-                            <img src="assets/storage/img/partners/4.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>TESDA - V</h4>
-                          </div>
+                            <a href="https://www.facebook.com/profile.php?id=100072503317481" target="_blank">
+                                <img src="assets/storage/img/partners/4.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>TESDA - V</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.deped.gov.ph/regions/region-v/" target="_blank">
-                            <img src="assets/storage/img/partners/9.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>DepED - V</h4>
-                          </div>
+                            <a href="https://www.deped.gov.ph/regions/region-v/" target="_blank">
+                                <img src="assets/storage/img/partners/9.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>DepED - V</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/dost5bicol" target="_blank">
-                            <img src="assets/storage/img/partners/16.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>DOST - V</h4>
-                          </div>
+                            <a href="https://www.facebook.com/dost5bicol" target="_blank">
+                                <img src="assets/storage/img/partners/16.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>DOST - V</h4>
+                            </div>
                         </div>
-                      </div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/DTI.RegionV" target="_blank">
-                            <img src="assets/storage/img/partners/5.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>DTI - V</h4>
-                          </div>
+                            <a href="https://www.facebook.com/DTI.RegionV" target="_blank">
+                                <img src="assets/storage/img/partners/5.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>DTI - V</h4>
+                            </div>
                         </div>
-                      </div>
+                    </div>
 
-                      <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
+                    <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
                         <div class="partners-wrap">
-                          <a href="https://quanbyit.com/" target="_blank">
-                            <img src="assets/storage/img/partners/6.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Quanby IT Solutions</h4>
-                          </div>
+                            <a href="https://quanbyit.com/" target="_blank">
+                                <img src="assets/storage/img/partners/6.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Quanby IT Solutions</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/AiUpwardSolutions" target="_blank">
-                            <img src="assets/storage/img/partners/14.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Upward Solution Inc.,</h4>
-                          </div>
+                            <a href="https://www.facebook.com/AiUpwardSolutions" target="_blank">
+                                <img src="assets/storage/img/partners/14.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Upward Solution Inc.,</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-industry-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/ICPHubPH" target="_blank">
-                            <img src="assets/storage/img/partners/15.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Internet Computer Protocol-ICP Manila</h4>
-                          </div>
+                            <a href="https://www.facebook.com/ICPHubPH" target="_blank">
+                                <img src="assets/storage/img/partners/15.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Internet Computer Protocol-ICP Manila</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/creativelegazpi" target="_blank">
-                            <img src="assets/storage/img/partners/13.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Creative Legazpi</h4>
-                          </div>
+                            <a href="https://www.facebook.com/creativelegazpi" target="_blank">
+                                <img src="assets/storage/img/partners/13.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Creative Legazpi</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-government-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/AICTA" target="_blank">
-                            <img src="assets/storage/img/partners/17.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Albay ICT Association, Inc (AICTA)</h4>
-                          </div>
+                            <a href="https://www.facebook.com/AICTA" target="_blank">
+                                <img src="assets/storage/img/partners/17.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Albay ICT Association, Inc (AICTA)</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-school-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-school-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/dwclegazpisvd" target="_blank">
-                            <img src="assets/storage/img/partners/77.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Divine Word College of Legazpi</h4>
-                          </div>
+                            <a href="https://www.facebook.com/dwclegazpisvd" target="_blank">
+                                <img src="assets/storage/img/partners/77.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Divine Word College of Legazpi</h4>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6 partners-item filter-school-partners">
+                    </div>
+                    <div class="col-lg-4 col-md-6 partners-item filter-school-partners">
                         <div class="partners-wrap">
-                          <a href="https://www.facebook.com/sltcfi" target="_blank">
-                            <img src="assets/storage/img/partners/12.png" class="img-fluid" alt="">
-                            <div class="partners-overlay"></div>
-                          </a>
-                          <div class="partners-info">
-                            <h4>Southern Luzon Technological College Foundation, Inc.</h4>
-                          </div>
+                            <a href="https://www.facebook.com/sltcfi" target="_blank">
+                                <img src="assets/storage/img/partners/12.png" class="img-fluid" alt="">
+                                <div class="partners-overlay"></div>
+                            </a>
+                            <div class="partners-info">
+                                <h4>Southern Luzon Technological College Foundation, Inc.</h4>
+                            </div>
                         </div>
-                      </div>
+                    </div>
 
 
 
@@ -615,7 +635,7 @@
         <!-- End Our Agenda Section -->
 
         <!-- ===================== CTA Section ===================== -->
-        <section class="cta" >
+        <section class="cta">
             <div class="container">
 
                 <div class="text-center">
@@ -640,38 +660,41 @@
         <section class="more-agenda section-bg">
             <div class="more-agenda-stars-overlay"></div>
             <div class="container">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="card card-fixed-size">
-                    <img src="assets/storage/img/address.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"><a href=""> Building </a></h5>
-                      <p class="card-text"> The world of tech, gaming, and cosplay right at the heart of Legazpi City </p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="card card-fixed-size">
+                            <img src="assets/storage/img/address.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href=""> Building </a></h5>
+                                <p class="card-text"> The world of tech, gaming, and cosplay right at the heart of
+                                    Legazpi City </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="card card-fixed-size">
-                    <div id="map" class="card-img-top map-small-view"></div>
-                    <div class="card-body">
-                      <h5 class="card-title"><a href=""> Map </a></h5>
-                      <p class="card-text"> Save the date - April 15-16, 2024! See you there! <br>Join us for the DEVCON Legazpi Roadshow </p>
-                      <a class="btn scrollto" href="view-map.html" target="_blank"> Visit Maps </a>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="card card-fixed-size">
+                            <div id="map" class="card-img-top map-small-view"></div>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href=""> Map </a></h5>
+                                <p class="card-text"> Save the date - April 15-16, 2024! See you there! <br>Join us for
+                                    the DEVCON Legazpi Roadshow </p>
+                                <a class="btn scrollto" href="view-map.html" target="_blank"> Visit Maps </a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
-                  <div class="card card-fixed-size">
-                    <img src="assets/storage/img/building.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"><a href=""> Address </a></h5>
-                      <p class="card-text"> Legazpi City Convention Center <br> Airport Rd, Legazpi City, Philippines. </p>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="card card-fixed-size">
+                            <img src="assets/storage/img/building.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href=""> Address </a></h5>
+                                <p class="card-text"> Legazpi City Convention Center <br> Airport Rd, Legazpi City,
+                                    Philippines. </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
         <!-- End More Agenda Section -->
 
         <!-- ===================== Info Box Section ===================== -->
@@ -897,7 +920,8 @@
                         </p>
                         <div class="social-links mt-3">
                             <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
-                            <a href="https://www.facebook.com/devconlegazpi" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.facebook.com/devconlegazpi" class="facebook"><i
+                                    class="bx bxl-facebook"></i></a>
                             <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
@@ -929,9 +953,9 @@
                     <div class="col-lg-4 col-md-6 footer-newsletter">
                         <h4>Our Newsletter</h4>
                         <p>Subscribe for exclusive event updates</p>
-                         <form action="">
+                        <form action="">
                             <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </form> 
+                        </form>
 
                     </div>
 
