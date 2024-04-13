@@ -1,41 +1,43 @@
-const viewPdfBtn = document.getElementById('viewPdfBtn');
-const pdfModal = document.getElementById('pdfModal');
-const closePdfModal = document.getElementById('closePdfModal');
-const pdfViewer = document.getElementById('pdfViewer');
+document.addEventListener("DOMContentLoaded", function () {
+  const viewPdfBtn = document.getElementById("viewPdfBtn");
+  const pdfModal = document.getElementById("pdfModal");
+  const closePdfModal = document.getElementById("closePdfModal");
+  const pdfViewer = document.getElementById("pdfViewer");
 
-// PDF file URL
-const pdfUrl = 'assets/storage/pdf/roadshow_programflow.pdf';
+  // PDF file URL
+  const pdfUrl = "assets/storage/pdf/roadshow_programflow.pdf";
 
-// Function to open the modal
-function openPdfModal() {
-  pdfViewer.src = pdfUrl; // Set the PDF file URL to the viewer iframe src attribute
-  pdfModal.style.display = 'block'; // Show the modal
-}
-
-// Function to close the modal
-function closePdfModalFunction() {
-  pdfModal.style.display = 'none'; // Hide the modal
-  pdfViewer.src = ''; // Clear the PDF viewer iframe src
-}
-
-// Add click event listener to the button to open the modal
-viewPdfBtn.addEventListener('click', openPdfModal);
-
-// Add click event listener to the close button in the modal to close it
-closePdfModal.addEventListener('click', closePdfModalFunction);
-
-// Close the modal if the user clicks outside of it
-window.addEventListener('click', function(event) {
-  if (event.target === pdfModal) {
-    closePdfModalFunction();
+  // Function to open the modal
+  function openPdfModal() {
+    pdfViewer.src = pdfUrl; // Set the PDF file URL to the viewer iframe src attribute
+    pdfModal.style.display = "block"; // Show the modal
   }
-});
 
-// Close the modal if the user presses the Esc key
-window.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape' && pdfModal.style.display === 'block') {
-    closePdfModalFunction();
+  // Function to close the modal
+  function closePdfModalFunction() {
+    pdfModal.style.display = "none"; // Hide the modal
+    pdfViewer.src = ""; // Clear the PDF viewer iframe src
   }
+
+  // Add click event listener to the button to open the modal
+  viewPdfBtn.addEventListener("click", openPdfModal);
+
+  // Add click event listener to the close button in the modal to close it
+  closePdfModal.addEventListener("click", closePdfModalFunction);
+
+  // Close the modal if the user clicks outside of it
+  window.addEventListener("click", function (event) {
+    if (event.target === pdfModal) {
+      closePdfModalFunction();
+    }
+  });
+
+  // Close the modal if the user presses the Esc key
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && pdfModal.style.display === "block") {
+      closePdfModalFunction();
+    }
+  });
 });
 
 // carousel
@@ -73,9 +75,7 @@ function handleMap() {
   var initialMarker = L.marker([0, 0]).addTo(map);
 
   // Destination marker
-  var destinationMarker = L.marker([
-    13.152140, 123.732491,
-  ]).addTo(map);
+  var destinationMarker = L.marker([13.15214, 123.732491]).addTo(map);
 
   // Tooltip for destination marker
   destinationMarker
@@ -83,7 +83,7 @@ function handleMap() {
     .openTooltip();
 
   // for identification of page to check if url is in view-map.html
-  var isViewMap = window.location.pathname.includes("view-map.html");
+  var isViewMap = window.location.pathname.includes("public/view-map.html");
 
   // Get current location
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -102,7 +102,7 @@ function handleMap() {
     // Initialize routing control after getting current location
     L.Routing.control({
       waypoints: [
-        L.latLng(13.152140, 123.732491), // Destination
+        L.latLng(13.15214, 123.732491), // Destination
         L.latLng(latitude, longitude), // Origin
       ],
       routeWhileDragging: true,
@@ -123,14 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const colors = ['primary', 'secondary', 'tertiary', 'quaternary'];
+  const colors = ["primary", "secondary", "tertiary", "quaternary"];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  const preloader = document.getElementById('preloader');
+  const preloader = document.getElementById("preloader");
 
-  preloader.style.backgroundColor = getComputedStyle(document.documentElement)
-    .getPropertyValue(`--${randomColor}`);
+  preloader.style.backgroundColor = getComputedStyle(
+    document.documentElement
+  ).getPropertyValue(`--${randomColor}`);
 
   setTimeout(function () {
-    preloader.style.display = 'none';
+    preloader.style.display = "none";
   }, 5000);
 });
